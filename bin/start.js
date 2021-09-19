@@ -98,11 +98,12 @@ exec(
 
     // installing dependencies
     console.log('Installing deps -- it might take a few minutes..');
-    const devDeps = getDeps(packageJson.devDependencies);
+    // const devDeps = getDeps(packageJson.devDependencies);
     const deps = getDeps(packageJson.dependencies);
 
     exec(
-      `cd ${process.argv[2]} && git init && node -v && npm -v && npm i -D ${devDeps} && npm i -S ${deps}`,
+      // `cd ${process.argv[2]} && git init && node -v && npm -v && npm i -D ${devDeps} && npm i -S ${deps}`,
+      `cd ${process.argv[2]} && git init && node -v && npm -v && npm i -S ${deps}`,
       (npmErr, npmStdout) => {
         if (npmErr) {
           console.error(`Some error while installing dependencies ${npmErr}`);
