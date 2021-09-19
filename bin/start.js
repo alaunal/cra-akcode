@@ -47,16 +47,16 @@ exec(
       return;
     }
 
-    const packageJSON = `${process.argv[2]}/package.json`;
+    const pckgJsonNew = `${process.argv[2]}/package.json`;
 
     // replace the default scripts
-    fs.readFile(packageJSON, (err, file) => {
+    fs.readFile(pckgJsonNew, (err, file) => {
       if (err) throw err;
       const data = file
         .toString()
         .replace('"test": "echo \\"Error: no test specified\\" && exit 1"', scripts)
         .replace('"keywords": []', `${engines},${babel},${browserslist},${babelMacros},${eslintConfig}`);
-      fs.writeFile(packageJSON, data, (err2) => err2 || true);
+      fs.writeFile(pckgJsonNew, data, (err2) => err2 || true);
     });
 
     const filesToCopy = [
@@ -98,6 +98,7 @@ exec(
 
     // installing dependencies
     console.log('Installing deps -- it might take a few minutes..');
+    console.log('package json', packageJson.dependencies);
     // const devDeps = getDeps(packageJson.devDependencies);
     const deps = getDeps(packageJson.dependencies);
 

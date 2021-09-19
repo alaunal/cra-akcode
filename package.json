@@ -1,6 +1,6 @@
 {
   "name": "cra-akcode",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "keywords": [
     "react",
     "jsx",
@@ -80,6 +80,9 @@
     ]
   },
   "babel": {
-    "plugins": ["babel-plugin-macros", "@babel/plugin-transform-react-jsx"]
+    "plugins": [
+      "babel-plugin-macros",
+      "@babel/plugin-transform-react-jsx"
+    ]
   }
 }
