@@ -15,6 +15,9 @@
     "node": ">= 10.x",
     "npm": ">= 6.0.0"
   },
+  "bin": {
+    "cra-akcode": "./bin/start.js"
+  },
   "dependencies": {
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-react-jsx": "^7.12.17",
@@ -76,5 +79,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "babel": {
+    "plugins": ["babel-plugin-macros", "@babel/plugin-transform-react-jsx"]
   }
 }
