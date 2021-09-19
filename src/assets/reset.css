@@ -1,0 +1,37 @@
+// -- Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+// -- Body Default
+body {
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  letter-spacing: 0;
+  font-feature-settings: "kern"1;
+  font-kerning: normal;
+}
+
+// -- Image
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+
+img {
+  &[src=""] {
+    visibility: hidden;
+  }
+
+  &.lazy {
+    &.error {
+      visibility: hidden;
+    }
+  }
+}
