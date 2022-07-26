@@ -98,7 +98,6 @@ exec(
 
     // installing dependencies
     console.log('Installing deps -- it might take a few minutes..');
-    console.log('package json', packageJson.dependencies);
     // const devDeps = getDeps(packageJson.devDependencies);
     const deps = getDeps(packageJson.dependencies);
 
